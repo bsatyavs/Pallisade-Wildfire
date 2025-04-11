@@ -1,44 +1,76 @@
-# 🔥 Wildfire Building Damage Assessment using ML & GIS (Palisade Wildfire 2025)
+# 🔥 Wildfire Building Damage Assessment using Machine Learning & GIS (Palisade Wildfire 2025)
 
-This project presents a GIS-integrated machine learning framework to assess wildfire-induced building damage. The case study focuses on the 2025 Palisade Wildfire in California, leveraging high-resolution satellite imagery, terrain, wind, and land cover data.
+This repository presents a machine learning and GIS-integrated framework to classify building damage caused by the 2025 Palisade Wildfire in California. Using pre- and post-fire satellite imagery, terrain and wind data, and land cover classification, the project implements and compares multiple supervised models to predict building damage. The top-performing model (XGBoost) is deployed through an interactive Folium-based web map.
 
-## 📌 Overview
+---
 
-Using building-level point data, the workflow computes vegetation loss and burn severity (ΔNDVI and ΔNBR), merges them with environmental features (slope, wind, NLCD), and applies four supervised ML models to classify buildings as **Damaged** or **Undamaged**.
+## 📌 Project Highlights
 
-## 🧠 Models Used
-- Random Forest
-- Support Vector Machine (SVM)
-- Logistic Regression
-- XGBoost (Best performing model - 83.2% accuracy)
+- 🛰️ Inputs: High-resolution PlanetScope imagery, USGS DEM, NLCD, wind data
+- 📦 Dataset: 9,543 buildings labeled as Damaged/Undamaged
+- 🔁 Models: Random Forest, SVM, Logistic Regression, XGBoost
+- 📊 Metrics: Accuracy, Precision, Recall, F1-score, Confusion Matrix
+- 🗺️ Visualization: Interactive Folium web map with building footprint overlay
+- 📁 Deployment: Hosted via GitHub Pages
 
-## 🗺️ Interactive Folium Map
+---
 
-The XGBoost-predicted building damage classifications are overlaid on an interactive map using **Folium**.
+## 🧠 Machine Learning Pipeline
 
-👉 [View Live Map] (https://github.com/bsatyavs/Pallisade-Wildfire/blob/main/XGBoost_Predicted_Map_with_Legend_and_DatasetType.html)
-## 📁 Files
+1. Feature Extraction: ΔNDVI, ΔNBR, slope, wind speed, NLCD
+2. Feature Engineering: Normalization, label encoding, class balancing
+3. Model Training: RF, SVM, LR, XGBoost with stratified 80/20 split
+4. Evaluation: Accuracy, F1-Score, Feature Importance
+5. Deployment: Visualization using Folium + GitHub Pages
 
-| File                              | Description                                       |
-|-----------------------------------|---------------------------------------------------|
-| `pallisate_building_damage.ipynb` | Jupyter Notebook with complete ML + GIS workflow |
-| `XGBoost_Predicted_Map_with_...`  | Exported Folium HTML map                         |
-| `Pallisade_point_data.csv`        | Building-level dataset with spatial + damage data |
-| `README.md`                       | Project overview and instructions                |
+---
+
+## 🗺️ Live Interactive Map
+
+👉(https://github.com/bsatyavs/Pallisade-Wildfire/blob/main/XGBoost_Predicted_Map_with_Legend_and_DatasetType.html) 
 
 
-## 📊 Dataset
+---
+
+## 📂 Repository Structure
+
+| File Name                                                | Description                                       |
+|----------------------------------------------------------|---------------------------------------------------|
+| `pallisate_building_damage.ipynb`                        | Full workflow: preprocessing, modeling, analysis  |
+| `XGBoost_Predicted_Map_with_Legend_and_DatasetType.html` | Exported interactive map (hosted via GitHub Pages)|
+| `Pallisade_point_data.csv`                               | Input dataset with spatial and spectral features  |
+| `README.md`                                              | Project documentation                             |
+
+---
+
+## 📊 Dataset Description
 
 The dataset includes:
-- 9,543 building points
-- Damage labels (Ground truth)
-- ΔNDVI & ΔNBR indices
-- Slope (from DEM), Wind Speed (Global Wind Atlas)
-- NLCD land cover classification
+- 9,543 building records
+- Binary classification labels: Damaged / Undamaged
+- NDVI & NBR indices (pre/post)
+- Terrain slope (from DEM)
+- Wind data (Global Wind Atlas)
+- Land cover (NLCD)
 
-## 🧭 Dependencies
-- Python 3.9+
-- pandas, geopandas, scikit-learn, xgboost, folium, matplotlib
+Dataset available here : "https://github.com/bsatyavs/Pallisade-Wildfire/blob/main/Pallisade_point_data.csv"
+---
 
-```bash
-pip install -r requirements.txt
+## 🧩 Dependencies and Libraries
+
+```python
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.ensemble import RandomForestClassifier, StackingClassifier
+from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
+from xgboost import XGBClassifier
+from sklearn.metrics import (classification_report, confusion_matrix,
+                             accuracy_score, precision_score, recall_score, f1_score)
+import geopandas as gpd
+import folium
+from folium import GeoJsonTooltip
+import matplotlib.pyplot as plt
+import seaborn as sns
