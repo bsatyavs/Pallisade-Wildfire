@@ -27,7 +27,7 @@ This repository presents a machine learning and GIS-integrated framework to clas
 
 ## 🗺️ Live Interactive Map
 
-👉(https://github.com/bsatyavs/Pallisade-Wildfire/blob/main/XGBoost_Predicted_Map_with_Legend_and_DatasetType.html) 
+👉(https://bsatyavs.github.io/Pallisade-Wildfire/index.html) 
 
 
 ---
