@@ -36,7 +36,7 @@ This repository presents a machine learning and GIS-integrated framework to clas
 
 | File Name                                                | Description                                       |
 |----------------------------------------------------------|---------------------------------------------------|
-| `pallisate_building_damage.ipynb`                        | Full workflow: preprocessing, modeling, analysis  |
+| `pallisate_building_damage.zip`                          | Markdown file of full code, report & Output images|
 | `XGB_RF_AllBuildings_ToggleMap.html`                     | Exported interactive map (hosted via GitHub Pages)|
 | `Pallisade_point_data.csv`                               | Input dataset with spatial and spectral features  |
 | `README.md`                                              | Project documentation                             |
