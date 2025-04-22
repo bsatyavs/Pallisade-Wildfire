@@ -27,7 +27,7 @@ This repository presents a machine learning and GIS-integrated framework to clas
 
 ## 🗺️ Live Interactive Map
 
-👉(https://bsatyavs.github.io/Pallisade-Wildfire/XGB_RF_AllBuildings_ToggleMap.html) 
+👉(https://bsatyavs.github.io/Pallisade-Wildfire/Index.html) 
 
 
 ---
