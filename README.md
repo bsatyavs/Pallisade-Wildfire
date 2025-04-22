@@ -12,7 +12,7 @@ This repository presents a machine learning and GIS-integrated framework to clas
 - 📊 Metrics: Accuracy, Precision, Recall, F1-score, Confusion Matrix
 - 🗺️ Visualization: Interactive Folium web map with building footprint overlay
 - 📁 Deployment: Hosted via GitHub Pages
-
+- 
 ---
 
 ## 🧠 Machine Learning Pipeline
