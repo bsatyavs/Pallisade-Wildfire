@@ -27,7 +27,7 @@ This repository presents a machine learning and GIS-integrated framework to clas
 
 ## 🗺️ Live Interactive Map
 
-👉(https://bsatyavs.github.io/Pallisade-Wildfire/index.html) 
+👉(https://bsatyavs.github.io/Pallisade-Wildfire/XGB_RF_AllBuildings_ToggleMap.html) 
 
 
 ---
@@ -37,7 +37,7 @@ This repository presents a machine learning and GIS-integrated framework to clas
 | File Name                                                | Description                                       |
 |----------------------------------------------------------|---------------------------------------------------|
 | `pallisate_building_damage.ipynb`                        | Full workflow: preprocessing, modeling, analysis  |
-| `XGBoost_Predicted_Map_with_Legend_and_DatasetType.html` | Exported interactive map (hosted via GitHub Pages)|
+| `XGB_RF_AllBuildings_ToggleMap.html`                     | Exported interactive map (hosted via GitHub Pages)|
 | `Pallisade_point_data.csv`                               | Input dataset with spatial and spectral features  |
 | `README.md`                                              | Project documentation                             |
 
