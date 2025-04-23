@@ -1,6 +1,6 @@
 # 🔥 Wildfire Building Damage Assessment using Machine Learning & GIS (Palisade Wildfire 2025)
 
-This repository presents a machine learning and GIS-integrated framework to classify building damage caused by the 2025 Palisade Wildfire in California. Using pre- and post-fire satellite imagery, terrain and wind data, and land cover classification, the project implements and compares multiple supervised models to predict building damage. The top-performing model (XGBoost) is deployed through an interactive Folium-based web map.
+This repository presents a machine learning and GIS-integrated framework to classify building damage caused by the 2025 Palisade Wildfire in California. Using pre- and post-fire satellite imagery, terrain and wind data, and land cover classification, the project implements and compares multiple supervised models to predict building damage. The top-performing model (XGBoost) and Random Forest Models are deployed through an interactive Folium-based web map.
 
 ---
 
@@ -36,8 +36,9 @@ This repository presents a machine learning and GIS-integrated framework to clas
 
 | File Name                                                | Description                                       |
 |----------------------------------------------------------|---------------------------------------------------|
+| `pallisade_wildfire_Report.pdf`                          | Documentation of the research project             |
 | `pallisate_building_damage.zip`                          | Markdown file of full code, report & Output images|
-| `XGB_RF_AllBuildings_ToggleMap.html`                     | Exported interactive map (hosted via GitHub Pages)|
+| `index.html`                                             | Exported interactive map (hosted via GitHub Pages)|
 | `Pallisade_point_data.csv`                               | Input dataset with spatial and spectral features  |
 | `README.md`                                              | Project documentation                             |
 
